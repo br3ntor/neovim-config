@@ -20,13 +20,12 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = { 'mode' },
-    --lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_b = { 'branch', 'diff', {
       'diagnostics',
       always_visible = true,
       icons_enabled = false -- Well it is definitely related to the icons
     } },
-    lualine_c = { 'filename' },
+    lualine_c = { { 'filename', path = 3 } },
     lualine_x = { 'encoding', 'fileformat', 'filetype' },
     lualine_y = { 'progress' },
     lualine_z = { 'location' }
@@ -39,35 +38,8 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {
-    lualine_a = { 'tabs' },
-    lualine_b = { 'filename' },
-    lualine_c = {},
-    --lualine_x = { 'filename' },
-    lualine_x = {},
-    --lualine_y = { 'tabs' },
-    lualine_y = {},
-    lualine_z = {}
-  },
-  --tabline = {},
-  winbar = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = { 'filename' }
-  },
-
-  inactive_winbar = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = { 'filename' }
-  },
-  --winbar = {},
-  --inactive_winbar = {},
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
   extensions = {}
 }
