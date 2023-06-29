@@ -19,7 +19,7 @@ bufferline.setup {
   },
   highlights = {
     buffer_selected = {
-      fg = '#608B4E',
+      fg = '#D4D4D4',
     },
     background = {
       fg = 'grey',
