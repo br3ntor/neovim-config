@@ -9,3 +9,7 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>p', ':bprevious<CR>', {})
 vim.keymap.set('n', '<leader>n', ':bnext<CR>', {})
+
+-- My custom not suggested by anyone
+vim.keymap.set('n', '<C-s>', ':w<CR>', {})
+vim.keymap.set('n', '<C-w>', ':bd<CR>', {})

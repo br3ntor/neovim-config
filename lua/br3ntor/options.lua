@@ -7,7 +7,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.mouse = 'v'
+--vim.opt.mouse = 'v'
 
 -- CursorLine bg only on focus
 vim.cmd([[
