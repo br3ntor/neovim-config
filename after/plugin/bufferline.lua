@@ -24,7 +24,7 @@ bufferline.setup {
       bg = 'none'
     },
     background = {
-      fg = '#292E42',
+      fg = '#464E70',
       bg = 'none'
     },
     tab_selected = {
