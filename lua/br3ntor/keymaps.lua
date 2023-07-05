@@ -1,4 +1,4 @@
-print("Loading key bindings...")
+print("Loading keymaps...")
 -- Bindings
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>e", vim.cmd.Lex)

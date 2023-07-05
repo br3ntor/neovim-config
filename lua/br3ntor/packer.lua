@@ -15,14 +15,13 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Colorschemes
-  use { "catppuccin/nvim", as = "catppuccin" }
   use "folke/tokyonight.nvim"
-  use { "ellisonleao/gruvbox.nvim" }
+
+  -- Lualine
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-  use "rebelot/kanagawa.nvim"
 
   -- Treesitter
   use {
@@ -67,5 +66,6 @@ return require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator'
 
   -- diffview.nvim
-  use "sindrets/diffview.nvim"
+  use 'nvim-tree/nvim-web-devicons'
+  use { "sindrets/diffview.nvim" }
 end)

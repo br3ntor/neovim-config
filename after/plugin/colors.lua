@@ -1,17 +1,18 @@
 print("Loading ColorMyPencils...")
+
 function ColorMyPencils()
   -- Colorscheme config
-  --require("tokyonight").setup({
-  --  styles = {
-  --    comments = { italic = false },
-  --    keywords = { italic = false },
-  --  },
-  --  --on_colors = function(colors)
-  --  --  --colors.hint = colors.orange
-  --  --  --colors.error = "#ff0000"
-  --  --colors.diff.add = "#42824A"
-  --  --end
-  --})
+  require("tokyonight").setup({
+    styles = {
+      comments = { italic = false },
+      keywords = { italic = false },
+    },
+    --on_colors = function(colors)
+    --  --colors.hint = colors.orange
+    --  --colors.error = "#ff0000"
+    --colors.diff.add = "#42824A"
+    --end
+  })
   vim.cmd([[colorscheme tokyonight]])
 
   -- My custom colors
