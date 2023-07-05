@@ -1,4 +1,4 @@
-print("Loading options.lua")
+print("Loading options...")
 
 vim.opt.number = true
 vim.opt.relativenumber = true

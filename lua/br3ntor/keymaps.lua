@@ -11,5 +11,5 @@ vim.keymap.set('n', '<leader>p', ':bprevious<CR>', {})
 vim.keymap.set('n', '<leader>n', ':bnext<CR>', {})
 
 -- My custom not suggested by anyone
+-- Ctrl-S save
 vim.keymap.set('n', '<C-s>', ':w<CR>', {})
-vim.keymap.set('n', '<C-w>', ':bd<CR>', {})

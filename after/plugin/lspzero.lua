@@ -1,4 +1,5 @@
 print("Loading lsp-zero...")
+-- Check if NeoVim is started in diff mode
 
 local lsp = require('lsp-zero').preset({})
 
@@ -21,7 +22,11 @@ lsp.set_server_config({
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
-lsp.setup()
+-- Disable LSP configuration if started in diff mode
+local isDiffMode = vim.fn.index(vim.v.argv, "-d") ~= -1
+if not isDiffMode then
+  lsp.setup()
+end
 
 
 -- You need to setup `cmp` after lsp-zero

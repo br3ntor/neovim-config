@@ -1,4 +1,4 @@
-print("Loading packer.lua...")
+print("Loading packer...")
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+  use "rebelot/kanagawa.nvim"
 
   -- Treesitter
   use {
@@ -64,4 +65,7 @@ return require('packer').startup(function(use)
 
   -- vim-tmux-navigator
   use 'christoomey/vim-tmux-navigator'
+
+  -- diffview.nvim
+  use "sindrets/diffview.nvim"
 end)
