@@ -68,4 +68,19 @@ return require('packer').startup(function(use)
   -- diffview.nvim
   use 'nvim-tree/nvim-web-devicons'
   use { "sindrets/diffview.nvim" }
+
+  -- Surround
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      print("Loading nvim-surround...")
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  })
+
+  -- Comment stuff out with gcc and such
+  use 'tpope/vim-commentary'
 end)

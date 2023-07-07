@@ -1,4 +1,4 @@
-print("Loading ColorMyPencils...")
+print("Loading colorscheme...")
 
 function ColorMyPencils()
   -- Colorscheme config
@@ -7,11 +7,6 @@ function ColorMyPencils()
       comments = { italic = false },
       keywords = { italic = false },
     },
-    --on_colors = function(colors)
-    --  --colors.hint = colors.orange
-    --  --colors.error = "#ff0000"
-    --colors.diff.add = "#42824A"
-    --end
   })
   vim.cmd([[colorscheme tokyonight]])
 
@@ -22,7 +17,6 @@ function ColorMyPencils()
   vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
   vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
   vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none", fg = "#7A5E00" })
-  --vim.api.nvim_set_hl(0, "DiffAdd", { bg = "#42824A" })
 end
 
 ColorMyPencils()

@@ -20,7 +20,15 @@ lsp.set_server_config({
 })
 
 -- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+local lspconfig = require('lspconfig')
+lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+lspconfig.pyright.setup {
+  settings = {
+    pyright = {
+      typeCheckingMode = 'off'
+    }
+  }
+}
 
 -- Disable LSP configuration if started in diff mode
 local isDiffMode = vim.fn.index(vim.v.argv, "-d") ~= -1
