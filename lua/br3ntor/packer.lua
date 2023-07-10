@@ -83,4 +83,14 @@ return require('packer').startup(function(use)
 
   -- Comment stuff out with gcc and such
   use 'tpope/vim-commentary'
+
+  -- Git signs
+  use { 'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
+
+  -- null-ls
+  use 'jose-elias-alvarez/null-ls.nvim'
 end)
