@@ -9,8 +9,10 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- Buffer controls
-vim.keymap.set('n', '<leader>p', ':bprevious<CR>', {})
-vim.keymap.set('n', '<leader>n', ':bnext<CR>', {})
+--vim.keymap.set('n', '<leader>p', ':bprevious<CR>', {})
+-- vim.keymap.set('n', '<leader>n', ':bnext<CR>', {})
+vim.keymap.set('n', '<leader>p', ':BufferLineCyclePrev<CR>', {})
+vim.keymap.set('n', '<leader>n', ':BufferLineCycleNext<CR>', {})
 vim.keymap.set('n', '<leader>q', ':bdelete<CR>', {})
 
 -- Ctrl-S save
