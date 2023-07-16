@@ -20,3 +20,6 @@ vim.keymap.set('n', '<C-s>', ':w<CR>', {})
 
 -- Toggle line numbers
 vim.keymap.set('n', '<F3>', ':set invnumber invrelativenumber<CR>', {})
+
+-- Exit terminal mode
+vim.api.nvim_set_keymap('t', '<ESC>', '<C-\\><C-n>', { noremap = true })
