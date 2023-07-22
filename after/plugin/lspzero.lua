@@ -1,5 +1,4 @@
 print("Loading lsp-zero...")
--- Check if NeoVim is started in diff mode
 
 local lsp = require('lsp-zero').preset({})
 
@@ -20,9 +19,22 @@ lsp.set_server_config({
 })
 
 -- (Optional) Configure lua language server for neovim
+local util = require 'lspconfig.util'
+local root_files = {
+  'pyproject.toml',
+  'setup.py',
+  'setup.cfg',
+  'requirements.txt',
+  'Pipfile',
+  'pyrightconfig.json',
+  '.git',
+}
 local lspconfig = require('lspconfig')
 lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
 lspconfig.pyright.setup {
+  root_dir = function()
+    return util.root_pattern(unpack(root_files))() or vim.fn.getcwd()
+  end,
   settings = {
     pyright = {
       typeCheckingMode = 'off'
