@@ -41,6 +41,9 @@ lspconfig.pyright.setup {
     }
   }
 }
+-- lspconfig.bashls.setup {
+--   root_dir = util.find_git_ancestor
+-- }
 
 -- Disable LSP configuration if started in diff mode
 local isDiffMode = vim.fn.index(vim.v.argv, "-d") ~= -1
