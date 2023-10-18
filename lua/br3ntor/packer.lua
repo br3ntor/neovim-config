@@ -85,6 +85,8 @@ return require('packer').startup(function(use)
 
   -- Comment stuff out with gcc and such
   use 'tpope/vim-commentary'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
 
   -- Git signs
   use { 'lewis6991/gitsigns.nvim',
