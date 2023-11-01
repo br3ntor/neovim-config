@@ -19,6 +19,19 @@ lsp.set_server_config({
 })
 
 -- (Optional) Configure lua language server for neovim
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  -- Replace the language servers listed here
+  -- with the ones you want to install
+  ensure_installed = { 'jsonls', 'bashls', 'tsserver', 'pyright', 'lua_ls' },
+  handlers = {
+    lsp.default_setup,
+  },
+})
+
+
+
 local util = require 'lspconfig.util'
 local root_files = {
   'pyproject.toml',
