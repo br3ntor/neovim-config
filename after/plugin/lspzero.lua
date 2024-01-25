@@ -81,5 +81,22 @@ cmp.setup({
     -- Navigate between snippet placeholder
     --['<C-f>'] = cmp_action.luasnip_jump_forward(),
     --['<C-b>'] = cmp_action.luasnip_jump_backward(),
+
+    -- Trying to change <C-n> to <C-j>
+    ['<C-k>'] = cmp.mapping(function()
+      if cmp.visible() then
+        cmp.select_prev_item({ behavior = 'insert' })
+      else
+        cmp.complete()
+      end
+    end),
+    ['<C-j>'] = cmp.mapping(function()
+      if cmp.visible() then
+        cmp.select_next_item({ behavior = 'insert' })
+      else
+        cmp.complete()
+      end
+    end),
+
   }
 })
